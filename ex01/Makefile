@@ -6,15 +6,15 @@
 #    By: mstrauss <mstrauss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/01 13:46:59 by mstrauss          #+#    #+#              #
-#    Updated: 2025/04/01 13:53:32 by mstrauss         ###   ########.fr        #
+#    Updated: 2025/04/01 14:44:32 by mstrauss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = whatever
+NAME = iter
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror
 SRCS = main.cpp
-INC = whatever.hpp
+INC = iter.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
