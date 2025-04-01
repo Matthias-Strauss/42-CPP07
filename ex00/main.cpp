@@ -6,10 +6,11 @@
 /*   By: mstrauss <mstrauss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 13:09:01 by mstrauss          #+#    #+#             */
-/*   Updated: 2025/04/01 13:33:16 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/04/01 13:46:07 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "whatever.hpp"
 #include <iostream>
 
 int main(void) {
@@ -21,7 +22,6 @@ int main(void) {
   std::cout << "min( a, b ) = " << ::min(a, b) << std::endl;
   std::cout << "max( a, b ) = " << ::max(a, b) << std::endl;
   std::string c = "chaine1";
-
   std::string d = "chaine2";
   ::swap(c, d);
   std::cout << "c = " << c << ", d = " << d << std::endl;
