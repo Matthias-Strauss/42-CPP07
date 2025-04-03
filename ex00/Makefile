@@ -6,13 +6,13 @@
 #    By: mstrauss <mstrauss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/01 13:46:59 by mstrauss          #+#    #+#              #
-#    Updated: 2025/04/01 13:53:32 by mstrauss         ###   ########.fr        #
+#    Updated: 2025/04/03 11:49:29 by mstrauss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = whatever
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror -std=c++17
 SRCS = main.cpp
 INC = whatever.hpp
 OBJS = $(SRCS:.cpp=.o)
