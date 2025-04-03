@@ -6,12 +6,14 @@
 /*   By: mstrauss <mstrauss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 16:44:27 by mstrauss          #+#    #+#             */
-/*   Updated: 2025/04/03 14:01:45 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/04/03 15:35:23 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ARRAY_HPP
 #define ARRAY_HPP
+
+#include <exception>
 
 template <typename T> class Array {
 private:
@@ -26,7 +28,7 @@ public:
 
   Array &operator=(const Array &other);
   T &operator[](unsigned int i);
-  const T &operator[](unsigned int i);
+  const T &operator[](unsigned int i) const;
 
   unsigned int size() const;
 

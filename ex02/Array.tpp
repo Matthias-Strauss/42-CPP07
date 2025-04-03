@@ -6,7 +6,7 @@
 /*   By: mstrauss <mstrauss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 16:44:22 by mstrauss          #+#    #+#             */
-/*   Updated: 2025/04/03 14:04:41 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/04/03 15:34:03 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ Array<T>::Array(const Array &other) : _arr(nullptr), _size(0) {
 }
 
 template <typename T> Array<T>::~Array() {
-  if (arr != nullptr) {
+  if (_arr != nullptr) {
     delete[] _arr;
     _arr = nullptr;
   }
 };
 
-template <typename T> Array &operator=(const Array &other) {
+template <typename T> Array<T> &Array<T>::operator=(const Array &other) {
   if (this != &other) {
     delete[] _arr;
     _size = other._size;
@@ -46,15 +46,13 @@ template <typename T> Array &operator=(const Array &other) {
 }
 
 template <typename T> T &Array<T>::operator[](unsigned int i) {
-
   if (i >= _size) {
     throw OutOfBoundsException();
   }
   return _arr[i];
 }
 
-template <typename T> T &Array<T>::operator[](unsigned int i) {
-
+template <typename T> const T &Array<T>::operator[](unsigned int i) const {
   if (i >= _size) {
     throw OutOfBoundsException();
   }
