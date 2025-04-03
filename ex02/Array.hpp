@@ -6,7 +6,7 @@
 /*   By: mstrauss <mstrauss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 16:44:27 by mstrauss          #+#    #+#             */
-/*   Updated: 2025/04/03 13:31:55 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/04/03 13:45:43 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,10 @@ public:
   Array(const Array &arr);
   ~Array() {
     if (arr != nullptr) {
-      delete[] this->_arr;
+      delete[] _arr;
     }
   };
+
   Array &operator=(const Array &other) {
     if (this == &other) {
       return;
@@ -36,10 +37,26 @@ public:
     }
   };
 
-  T &operator[](unsigned int i);
-  const T &operator[](unsigned int i);
+  T &operator[](unsigned int i) {
+    if (i >= _size) {
+      throw OutOfBoundsException();
+    }
+    return _arr[i];
+  }
 
-  unsigned int size() const { return this._size; }
+  const T &operator[](unsigned int i) {
+    if (i >= _size) {
+      throw OutOfBoundsException();
+    }
+    return _arr[i];
+  }
+
+  unsigned int size() const { return _size; }
+
+  class OutOfBoundsException : public std::exception {
+  public:
+    const char *what() const throw() { return "Error: Index out of bounds"; }
+  };
 };
 
 #include "Array.tpp"
