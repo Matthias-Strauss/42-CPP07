@@ -6,7 +6,7 @@
 /*   By: mstrauss <mstrauss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 16:44:27 by mstrauss          #+#    #+#             */
-/*   Updated: 2025/04/03 11:44:00 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/04/03 13:31:55 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,24 @@ public:
   Array();
   Array(unsigned int size);
   Array(const Array &arr);
-  Array &operator=(const Array &other);
+  ~Array() {
+    if (arr != nullptr) {
+      delete[] this->_arr;
+    }
+  };
+  Array &operator=(const Array &other) {
+    if (this == &other) {
+      return;
+    }
+    if (this->_arr != nullptr) {
+      delete[] arr;
+    }
+  };
 
-  unsigned int size() = const { return this._size; }
+  T &operator[](unsigned int i);
+  const T &operator[](unsigned int i);
+
+  unsigned int size() const { return this._size; }
 };
 
 #include "Array.tpp"
