@@ -6,7 +6,7 @@
 /*   By: mstrauss <mstrauss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 16:44:27 by mstrauss          #+#    #+#             */
-/*   Updated: 2025/04/03 13:45:43 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/04/03 13:53:58 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,34 +22,11 @@ public:
   Array();
   Array(unsigned int size);
   Array(const Array &arr);
-  ~Array() {
-    if (arr != nullptr) {
-      delete[] _arr;
-    }
-  };
+  ~Array();
 
-  Array &operator=(const Array &other) {
-    if (this == &other) {
-      return;
-    }
-    if (this->_arr != nullptr) {
-      delete[] arr;
-    }
-  };
-
-  T &operator[](unsigned int i) {
-    if (i >= _size) {
-      throw OutOfBoundsException();
-    }
-    return _arr[i];
-  }
-
-  const T &operator[](unsigned int i) {
-    if (i >= _size) {
-      throw OutOfBoundsException();
-    }
-    return _arr[i];
-  }
+  Array &operator=(const Array &other);
+  T &operator[](unsigned int i);
+  const T &operator[](unsigned int i);
 
   unsigned int size() const { return _size; }
 
