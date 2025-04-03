@@ -6,7 +6,7 @@
 /*   By: mstrauss <mstrauss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 16:44:22 by mstrauss          #+#    #+#             */
-/*   Updated: 2025/04/03 13:59:26 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/04/03 14:04:41 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,19 @@ template <typename T> T &Array<T>::operator[](unsigned int i) {
   return _arr[i];
 }
 
-template <typename T> unsigned int size() const { return _size; }
+template <typename T> T &Array<T>::operator[](unsigned int i) {
+
+  if (i >= _size) {
+    throw OutOfBoundsException();
+  }
+  return _arr[i];
+}
+
+template <typename T> unsigned int Array<T>::size() const { return _size; }
+
+template <typename T>
+const char *Array<T>::OutOfBoundsException::what() const throw() {
+  return "Error: Index out of bounds";
+}
 
 #endif
