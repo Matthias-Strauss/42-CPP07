@@ -6,7 +6,7 @@
 /*   By: mstrauss <mstrauss@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 16:44:27 by mstrauss          #+#    #+#             */
-/*   Updated: 2025/04/18 14:44:00 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/04/18 16:58:05 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 #define ARRAY_HPP
 
 #include <exception>
+#include <string>
+
+struct Simple
+{
+  int i = 42;
+  std::string msg = "Hello There!";
+};
 
 template <typename T>
 class Array

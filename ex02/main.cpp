@@ -6,7 +6,7 @@
 /*   By: mstrauss <mstrauss@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 16:42:44 by mstrauss          #+#    #+#             */
-/*   Updated: 2025/04/18 15:47:57 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/04/18 16:59:47 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,9 @@ int main(void)
     std::cout << "stringArray[" << i << "] = " << stringArray[i] << std::endl;
   }
 
-  // std::cout << "\n--- Testing with complex type ---" << std::endl;
-  // Array<std::string> stringArray(3);
+  std::cout << std::endl;
+  std::cout << "Creating Array<simpleStruct> for complex type test" << std::endl;
+  Array<Simple> simpleArr(5);
+  std::cout << "If you can read this and we didn't crash = SUCCESS :D" << std::endl;
   return 0;
 }
