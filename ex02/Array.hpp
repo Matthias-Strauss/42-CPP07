@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstrauss <mstrauss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mstrauss <mstrauss@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 16:44:27 by mstrauss          #+#    #+#             */
-/*   Updated: 2025/04/03 15:35:23 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/04/18 14:44:00 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 #include <exception>
 
-template <typename T> class Array {
+template <typename T>
+class Array
+{
 private:
   T *_arr;
   unsigned int _size;
@@ -32,7 +34,8 @@ public:
 
   unsigned int size() const;
 
-  class OutOfBoundsException : public std::exception {
+  class OutOfBoundsException : public std::exception
+  {
   public:
     const char *what() const throw();
   };

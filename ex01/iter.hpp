@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstrauss <mstrauss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mstrauss <mstrauss@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:31:05 by mstrauss          #+#    #+#             */
-/*   Updated: 2025/04/01 14:46:58 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/04/18 13:55:12 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,15 @@
 #include <cstddef>
 #include <iostream>
 
-template <typename T> void iter(T *arr, std::size_t len, void (*f)(T &)) {
+template <typename T>
+void print(T &a) { std::cout << a << std::endl; }
 
-  if (!arr || len == 0)
-    return;
-
-  for (std::size_t i = 0; i < len; ++i) {
-    f(arr[i]);
+template <typename T>
+void iter(T *array, size_t length, void (*func)(T &))
+{
+  for (size_t i = 0; i < length; i++)
+  {
+    func(array[i]);
   }
 }
 

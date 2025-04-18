@@ -6,7 +6,7 @@
 #    By: mstrauss <mstrauss@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/01 13:46:59 by mstrauss          #+#    #+#              #
-#    Updated: 2025/04/18 13:57:08 by mstrauss         ###   ########.fr        #
+#    Updated: 2025/04/18 14:43:16 by mstrauss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,4 +49,4 @@ fclean:
 	rm -f $(OBJS) $(NAME)
 	rm -f $(TEST_OBJS) $(TEST_NAME)
 
-.phony: all re clean fclean
+.phony: all re clean fclean test
