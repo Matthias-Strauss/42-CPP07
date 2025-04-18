@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstrauss <mstrauss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mstrauss <mstrauss@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:39:25 by mstrauss          #+#    #+#             */
-/*   Updated: 2025/04/01 15:04:54 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/04/18 13:55:14 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iter.hpp"
+#include "Iter.hpp"
 
-template <typename T> void print(T &a) { std::cout << a << std::endl; }
-
-int main(void) {
+int main(void)
+{
   std::cout << std::endl;
 
   int intArr[] = {1, 2, 3, 4, 5};
   size_t intArrLen = sizeof(intArr) / sizeof(intArr[0]);
 
   std::cout << "initializing int array ..." << std::endl;
-  for (size_t i = 0; i < intArrLen; i++) {
+  for (size_t i = 0; i < intArrLen; i++)
+  {
     std::cout << intArr[i] << std::endl;
   }
   std::cout << std::endl;
@@ -41,7 +41,8 @@ int main(void) {
   size_t charArrLen = sizeof(charArr) / sizeof(charArr[0]);
 
   std::cout << "initializing char array ..." << std::endl;
-  for (size_t i = 0; i < charArrLen; ++i) {
+  for (size_t i = 0; i < charArrLen; ++i)
+  {
     std::cout << charArr[i] << " ";
   }
   std::cout << std::endl;
