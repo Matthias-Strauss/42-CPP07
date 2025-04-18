@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstrauss <mstrauss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mstrauss <mstrauss@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 13:09:01 by mstrauss          #+#    #+#             */
-/*   Updated: 2025/04/01 14:26:39 by mstrauss         ###   ########.fr       */
+/*   Updated: 2025/04/18 12:27:43 by mstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "whatever.hpp"
+#include "Whatever.hpp"
 #include <array>
 #include <iostream>
 
-int main(void) {
+int main(void)
+{
   int a = 2;
   int b = 3;
 
@@ -58,14 +59,16 @@ int main(void) {
 
   std::array<int, 5> arr1 = {1, 2, 3, 4, 5};
   std::cout << "initializing arr1: ";
-  for (int i = 0; i < 5; ++i) {
+  for (int i = 0; i < 5; ++i)
+  {
     std::cout << arr1[i] << " ";
   }
   std::cout << std::endl;
 
   std::array<int, 5> arr2 = {5, 4, 3, 2, 1};
   std::cout << "initializing arr2: ";
-  for (int i = 0; i < 5; ++i) {
+  for (int i = 0; i < 5; ++i)
+  {
     std::cout << arr2[i] << " ";
   }
   std::cout << std::endl;
@@ -77,13 +80,15 @@ int main(void) {
   ::swap(arr1, arr2);
 
   std::cout << "arr1: ";
-  for (int i = 0; i < 5; ++i) {
+  for (int i = 0; i < 5; ++i)
+  {
     std::cout << arr1[i] << " ";
   }
   std::cout << std::endl;
 
   std::cout << "arr2: ";
-  for (int i = 0; i < 5; ++i) {
+  for (int i = 0; i < 5; ++i)
+  {
     std::cout << arr2[i] << " ";
   }
   std::cout << std::endl;
